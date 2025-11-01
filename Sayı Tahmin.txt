@@ -1,0 +1,23 @@
+import random
+
+sayi = random.randint(1,100)
+tahmin_sayisi = 0
+
+print("Sayı Tahmine Hoşgeldin.")
+print(" ")
+print("1 ile 100 Arasında Bir Sayı Tutunuz")
+
+while True:
+    try:
+        tahmin = int(input("Tahmin Gir: "))
+        tahmin_sayisi += 1
+
+        if tahmin < sayi:
+            print("Sayıyı Büyütünüz")
+        elif tahmin > sayi:
+            print("Sayıyı Azaltın")
+        else:
+            print(f"Tebrikler Dogru {tahmin_sayisi} Bu Kadar Denemede Buldunuz")
+            break
+    except ValueError:
+        print("sayı giriniz")
